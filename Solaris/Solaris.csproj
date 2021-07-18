@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\Homepage.cshtml" />
     <Content Remove="wwwroot\banner.jpg" />
     <Content Remove="wwwroot\G.png" />
     <Content Remove="wwwroot\Model.png" />

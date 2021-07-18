@@ -2,13 +2,7 @@
 
 
 
-<h2>Index</h2>
 
-@foreach (Solaris.Models.Solaris solaris in Model.Data)
-{
-    @(solaris.city + " " + solaris.county + " " + solaris.zip_code)
-    <br/>
-}
 @{
     ViewData["Title"] = "Index";
 }
@@ -38,7 +32,7 @@
 
         .bg-img {
             /* The image used */
-            background-image: url.content(../../Resources/banner.jpg);
+           /* background-image: url.content("/Resourses/banner.jpg");*/
             min-height: 380px;
             /* Center and scale the image nicely */
             background-position: center;
@@ -152,7 +146,7 @@
             </div>
         </nav>
         <div class="bg-img">
-            <img src="../../Resources/banner.jpg"  />
+            <img src="../banner.jpg" style="width:1333px"  />
         </div>
         <div style="padding-left:20px; padding-right:20px">
 
