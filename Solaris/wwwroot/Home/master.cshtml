@@ -1,0 +1,194 @@
+﻿@model Solaris.Models.RootSolaris
+@*
+    @*
+        For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table {
+            max-width: 100%;
+            margin: auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            overflow-x: auto;
+        }
+
+        th {
+            padding: 5px;
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+            text-align: right;
+        }
+
+        table#TBL tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table#TBL tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table#TBL th {
+            background-color: goldenrod;
+            color: black;
+        }
+
+        .container {
+            margin: 20px;
+            width: auto;
+        }
+        /* The navbar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            /* Navbar links */
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 80px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                /*.topnav a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }*/
+
+            .topnav .icon {
+                display: none;
+            }
+
+       @* @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }*@
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @*@media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }*@
+
+                .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+        }
+    </style>
+</head>
+<body>
+    <font face="Arial Black">
+        <br>
+
+        <h1 align="center">Project Demographics </h1>
+
+        <br>
+        <div class="container">
+            <div class="topnav" id="myNav">
+                @*  <a class="active" href="index.html">Home</a>
+                    <a href="master.html">Project Demographics</a>
+                    <a href="detail.html">Project Specifications</a>
+                    <a href="aboutus.html">About Us</a>*@
+                @*<a class="active" href="">Home</a>*@
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                @*@<a asp-controller="/master.cshtml">Project Demographics</a>*@
+                <a asp-area="" asp-controller="Home" asp-action="master">Project Demographics</a>
+                @*<a @Html.ActionLink("Project Demographics", "master", "Home")></a>*@
+                @*<a href="detail.cshtml">Project Specifications</a>*@
+                <a asp-area="" asp-controller="Home" asp-action="detail">Project Specification</a>
+                @*@<a href="aboutus.cshtml">About Us</a>*@
+                <a asp-area="" asp-controller="Home" asp-action="aboutus">About Us</a>
+                <a href="javascript:void(0);" class="icon" onclick="homepageFunc()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <script>
+            function homepageFunc() {
+                var x = document.getElementById("myNav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+        <p>
+            Solar power in New York includes the largest solar farm on the east coast, the 37 MW Long Island Solar Farm, as well as the 17 MW enXco Eastern Long Island Solar Project, which consists of seven projects, three at LIRR station carports.
+        </p>
+        <p>
+            New York City is planning to build a 50 MW solar farm on 250 acres of a closed land fill.
+        </p>
+        <p>
+            New York has a renewable portfolio standard of 30% from renewable sources by 2015. In 2015 24% was renewable, 6% short of the goal. Wind is the predominant generating technology. In 2018, the New York State Energy Research and Development Authority awarded long-term contracts to 22 utility-scale solar farms, totaling a combined capacity of 646 MW.
+        </p>
+        <p>
+            In 2012, LIPA adopted a Power Purchase Agreement (limited to 50 MW), which will pay $0.22/kWh for solar generation for installations ranging from 50 kW to 20 MW. A $500 to $5000 application fee favors larger power plants represents roughly the first 10 days of generation for a 50 kW to 500 kW system, but less than 2 hours of generation for a 20 MW installation. The term of the agreement is 20 years, and systems must be interconnected to the grid at the 13.2 kV level. Unlike the feed-in tariff programs in many other places, customers pay for their own electricity as if they were not generating any, making this actually a power purchase agreement, and not a feed-in tariff. LIPA owns the SRECs (which could be worth more than they are paying for the electricity). A bill to establish SRECs in New York failed to pass in 2012. 50 MW of solar power will meet the average needs of about 7,000 households, or less than 1% of the electricity supplied by LIPA. 5 MW is reserved for systems less than 150 kW, and 10 MW for systems from 150 to 500 kW. The remaining 35 MW is available to systems of all sizes. If fully subscribed in the first year, the average household will pay an estimated $0.44/month to pay for the program, which will generate an estimated 79.4 million kWh/year. Estimated costs are based on an average avoided cost rate of $0.075/kWh, although peak generation costs can exceed $0.22/kWh, eliminating any cost. LIPA's total generation capacity, in 2011, was 6,800 MW.
+        </p>
+
+
+        <br>
+
+
+
+        <table id="TBL">
+            <tbody>
+                <tr>
+
+
+                    <th>Project Number</th>
+                    <th>City</th>
+                    <th>County</th>
+                    <th>Zip Code</th>
+                    <th>Project Cost</th>
+                </tr>
+                @*<tr><td style="text-align:left">157832</td><td>Newark</td><td>Wayne</td><td>14513</td><td>1000</td></tr>
+                    <tr><td style="text-align:left">294730</td><td>East Quogue</td><td>Suffolk</td><td>11942</td><td>25080</td></tr>
+                    <tr><td style="text-align:left">256419</td><td>Brooklyn </td><td>Kings</td><td>11212</td><td>32428</td></tr>
+                    <tr><td style="text-align:left">278528</td><td>Queens</td><td>Queens</td><td>11420</td><td>36288</td></tr>*@
+                @foreach (Solaris.Models.Solaris solaris in Model.Data)
+                {
+                    <tr><td>@(solaris.project_number)</td> <td>@(solaris.city)</td> <td>@(solaris.county)</td> <td>@(solaris.zip_code)</td> <td>@(solaris.project_cost)</td> </tr>
+                }
+            </tbody>
+        </table>
+
+    </font>
+
+
+</body>
+</html>

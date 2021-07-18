@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\banner.jpg" />
+    <Content Remove="wwwroot\G.png" />
+    <Content Remove="wwwroot\Model.png" />
+    <Content Remove="wwwroot\S.png" />
+    <Content Remove="wwwroot\T.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\Home\S.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\CRUD\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\banner.jpg" />
+    <None Include="wwwroot\G.png" />
+    <None Include="wwwroot\Model.png" />
+    <None Include="wwwroot\S.png" />
+    <None Include="wwwroot\T.jpg" />
+  </ItemGroup>
+
+</Project>
