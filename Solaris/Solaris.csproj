@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,6 +8,11 @@
     <Content Remove="Views\Home\Homepage.cshtml" />
     <Content Remove="wwwroot\banner.jpg" />
     <Content Remove="wwwroot\G.png" />
+    <Content Remove="wwwroot\Home\banner.jpg" />
+    <Content Remove="wwwroot\Home\G.png" />
+    <Content Remove="wwwroot\Home\Model.png" />
+    <Content Remove="wwwroot\Home\S.png" />
+    <Content Remove="wwwroot\Home\T.jpg" />
     <Content Remove="wwwroot\Model.png" />
     <Content Remove="wwwroot\S.png" />
     <Content Remove="wwwroot\T.jpg" />
@@ -35,6 +40,11 @@
   <ItemGroup>
     <None Include="wwwroot\banner.jpg" />
     <None Include="wwwroot\G.png" />
+    <None Include="wwwroot\Home\banner.jpg" />
+    <None Include="wwwroot\Home\G.png" />
+    <None Include="wwwroot\Home\Model.png" />
+    <None Include="wwwroot\Home\S.png" />
+    <None Include="wwwroot\Home\T.jpg" />
     <None Include="wwwroot\Model.png" />
     <None Include="wwwroot\S.png" />
     <None Include="wwwroot\T.jpg" />

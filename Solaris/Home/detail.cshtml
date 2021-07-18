@@ -4,7 +4,6 @@
 *@
 @{
 }
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,19 +27,19 @@
 
         td {
             padding: 5px;
-            text-align: left;
+            text-align: right;
         }
 
         table#TBL tr:nth-child(even) {
-            background-color: white;
+            background-color: #eee;
         }
 
         table#TBL tr:nth-child(odd) {
-            background-color: white ;
+            background-color: #fff;
         }
 
         table#TBL th {
-            background-color: #90C1D7;
+            background-color: goldenrod;
             color: black;
         }
 
@@ -79,7 +78,7 @@
                 display: none;
             }
 
-       @* @media screen and (max-width: 600px) {
+        @*@media screen and (max-width: 600px) {
             .topnav a:not(:first-child) {
                 display: none;
             }*@
@@ -90,7 +89,7 @@
             }
         }
 
-        @*@media screen and (max-width: 600px) {
+       @* @media screen and (max-width: 600px) {
             .topnav.responsive {
                 position: relative;
             }*@
@@ -113,15 +112,15 @@
     <font face="Arial Black">
         <br>
 
-        <h1 align="center">About Us </h1>
+        <h1 align="center">Project Specifications </h1>
 
         <br>
         <div class="container">
             <div class="topnav" id="myNav">
                 @*<a class="active" href="index.html">Home</a>
-                    <a href="master.html">Project Demographics</a>
-                    <a href="detail.html">Project Specifications</a>
-                    <a href="aboutus.html">About Us</a>*@
+        <a href="master.html">Project Demographics</a>
+        <a href="detail.html">Project Specifications</a>
+        <a href="aboutus.html">About Us</a>*@
                 <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 @*@<a asp-controller="/master.cshtml">Project Demographics</a>*@
                 <a asp-area="" asp-controller="Home" asp-action="master">Project Demographics</a>
@@ -147,54 +146,36 @@
         </script>
 
         <p>
-            This website is made as par requirement provided by course Distributed Information System (ISM 6225) at University of South Florida. This assignment helped us practice html, css and JavaScript.  <br>
-            <table id="TBL">
-                <tbody>
-                    <tr>
-                        <th>Team Member</th>
-                        <th>Contribution</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="display-field"><img src="/T.jpg" alt="Tejas" style="width:128px;height:128px;" /></div>
-                            
-                            <br>
-                            <a href="https://www.linkedin.com/in/tejas-kulkarni-bb5b39103/">Tejas Kulkarni</a>
-                            <br>
-                            tmkulkarni@usf.edu
-                        </td>
-                        <td>The main idea behind project and development was Tejas. He actively worked on doing programming of HTML and worked on the main design and helped implementing the same with the team. He also contributed in making the Project demographics page. He has worked as a software devoloper in a UK based market research firm. He is a keen data science enthusiast.</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="display-field"><img src="/G.png" alt="Gaurav" style="width:128px;height:128px;" /></div>
-                            
-                            <br>
-                            <a href="https://www.linkedin.com/in/gauravravirokade/">Gaurav Rokade</a>
-                            <br>
-                            gauravrokade@usf.edu
-                        </td>
-                        <td>An ambitious Graduate student in Business analytics and information systems and a hard working personal with about 4 years of experience as a business analyst. My areas are interest are Statistical  Data Mining, Big Data and Data Visualization. He has contributed in finding the database, collecting relevant information about it and designing Home page.</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="display-field"></div>
-                            <img src="/S.png" alt="Siddharth" style="width:128px;height:128px;" />
-                            <br>
-                            <a href="https://www.linkedin.com/in/siddharth-mundada-918b22211/">Siddharth Mundada</a>
-                            <br>
-                            siddharthm1@usf.edu
-                        </td>
-                        <td>He is conscientious individual with 3 years of robust experience in analyzing data, developing and supporting ETL Architectures using Informatica tools and he is an aspiring graduate student of Business Analytics and Information Systems at University of South Florida. He contributed in designing various pages of the website which involved about us and project specifications.</td>
-                    </tr>
-                </tbody>
-            </table>
+            To make the Solar technology affordable for all the New Yorkers the NY Sun initiative was started. It is a dynamic public-private partnership which aims to drive growth of the solar industry. As part of New York’s Reforming the Energy Vision (REV) plan, the NY-Sun program helps make it possible for New Yorkers to choose clean energy while lowering their energy costs.
+        </p>
+        <p>
+            This website showcases the data that is provided by the New York State Energy Research and Development Authority Solar Electric Programs (NYSERDA). NYSERDA offers objective information and analysis, innovative programs, technical expertise, and support to help New Yorkers increase energy efficiency, save money, use renewable energy, and reduce reliance on fossil fuels.
+        </p>
+        <p>
+            The dataset includes the following features: Project number, city, county, state, zip code, sector, program type, solicitation, electric utility, purchase type, date application received, date completed, project status, contractor, primary inverter manufacturer, total inverter quantity, primary inverter model number, primary PV module manufacturer, total PV module quantity, primary PV module model number, project cost, incentive amount, total nameplate capacity, expected annual kilowatt-hour production, remote net metering, affordable solar, community distributed generation project and Green Jobs-Green New York participant. Blank cells represent data that were not required or are not currently available.
+        </p>
+        <br>
+        <table id="TBL">
+            <tbody>
+                <tr>
+
+                    <th>Project Number</th>
+                    <th>Sector</th>
+                    <th>Purchase Type</th>
+                    <th>Project Status</th>
+                </tr>
+                @*<tr><td style="text-align:left">157832</td><td>Non-Residential</td><td>Long Island Power Authority</td><td>Purchase</td><td>Completed</td></tr>
+                <tr><td style="text-align:left">294730</td><td>Residential</td><td>Consolidated Edison</td><td>Lease</td><td>Completed</td></tr>
+                <tr><td style="text-align:left">256419</td><td>Residential</td><td>Consolidated Edison</td><td>Purchase</td><td>Pipeline</td></tr>
+                <tr><td style="text-align:left">278528</td><td>Residential</td><td>Consolidated Edison</td><td>Lease</td><td>Pipeline</td></tr>*@
+                @foreach (Solaris.Models.Solaris solaris in Model.Data)
+                {
+                    <tr><td>@(solaris.project_number)</td> <td>@(solaris.sector)</td>  <td>@(solaris.purchase_type)</td> <td>@(solaris.project_status)</td> </tr>
+                }
+            </tbody>
+        </table>
     </font>
 
-    <h3>Data Model</h3>
-
-    <div class="display-field"><img src="/Model.png" alt="Model" style="width:960px;height:540px;"/>
-    
 
 </body>
 </html>
